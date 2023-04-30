@@ -1,0 +1,45 @@
+/* body {
+  min-height: 5000px;
+} */
+
+.banner {
+  padding-top: 6rem;
+  background-color: rgb(10, 10, 10);
+}
+
+#about {
+  padding-top: 200px;
+  min-height: 500px;
+  background-image: url(img/bg4.png);
+
+  background-attachment: fixed;
+  background-position: center 50px;
+  background-repeat: no-repeat;
+  background-size: cover 100%;
+}
+
+#portfolio {
+  background-color: rgb(10, 10, 10);
+  padding-top: 80px;
+}
+
+#contact {
+  padding-top: 50px;
+  min-height: 500px;
+  background-image: url(img/bg4.png);
+
+  background-attachment: fixed;
+  background-position: center 50px;
+  background-repeat: no-repeat;
+  background-size: cover 100%;
+}
+
+footer {
+  background-color: #101010;
+  padding-top: 4px;
+}
+
+.btn-dark:hover {
+  background-color: #ffffff; /* ganti dengan warna yang diinginkan */
+  color: #000000; /* ganti dengan warna yang diinginkan */
+}
