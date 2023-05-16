@@ -85,3 +85,35 @@ window.addEventListener("DOMContentLoaded", function () {
 // NAVBAR AKTIF + NAVBAR SCROLL DONE
 
 // VIDEO PORTFOLIO
+// Mendapatkan elemen video
+const video = document.getElementById("portfolio-video");
+
+// Mendefinisikan fungsi untuk memulai atau menghentikan video saat di-scroll
+function playVideoOnScroll() {
+  // Mendapatkan posisi video relatif terhadap jendela browser
+  const videoPosition = video.getBoundingClientRect();
+
+  // Memeriksa apakah video berada di dalam tampilan layar (viewport)
+  if (
+    videoPosition.top >= 0 &&
+    videoPosition.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight)
+  ) {
+    // Memulai video jika belum diputar
+    if (video.paused) {
+      video.play();
+    }
+  } else {
+    // Jika video berada di luar tampilan layar, pause video
+    video.pause();
+  }
+}
+
+// Memanggil fungsi playVideoOnScroll saat DOM selesai dimuat
+document.addEventListener("DOMContentLoaded", playVideoOnScroll);
+
+// Memanggil fungsi playVideoOnScroll saat halaman selesai di-refresh
+window.addEventListener("load", playVideoOnScroll);
+
+// Menambahkan event listener untuk mendeteksi scroll
+window.addEventListener("scroll", playVideoOnScroll);
